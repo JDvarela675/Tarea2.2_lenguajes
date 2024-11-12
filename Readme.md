@@ -1,5 +1,10 @@
 Integrantes del grupo :
--Josue Daniel Varela Sandoval
+
+
+-> Josue Daniel Varela Sandoval
+ 
  #20222000646
- -kisha Marleen Mejía Moore
+ 
+-> kisha Marleen Mejía Moore
+ 
  #20232000836
