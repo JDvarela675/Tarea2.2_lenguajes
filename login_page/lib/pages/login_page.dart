@@ -1,35 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:login_page/widgets/caja_texto.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+   LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor:Colors.white,
-      toolbarHeight: 13,
-      ),
-      backgroundColor: Colors.black,
+      appBar: AppBar( toolbarHeight: 13,),
       body: SafeArea(
         child: Padding(
         padding: EdgeInsets.all(15.0),
         child: Column(
           children: [
-             SizedBox(height: 15),
-         Icon( Icons.group,
-                size: 60,
-                color: Colors.blue,
+            Icon( Icons.group,
+                size: 70,
+                color: Colors.cyan,
                 ),
 
-           SizedBox(height: 30),
+           SizedBox(height: 20),
 
          Container(
-          child: Row(
+          child: const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Welcome Back !!!',
+              Text('Bienvenidos a LoginPage',
          style: TextStyle(
-          color: Colors.white,
+          color: Colors.black,
           fontSize: 23.0,
           
          ),
@@ -40,8 +37,32 @@ class LoginPage extends StatelessWidget {
             ],
           ),
          ),
+         
+         SizedBox(height: 20),
 
-          ],
+         CustomTextBox(Title: 'Usuario',),
+          SizedBox(height: 17),
+
+        CustomTextBox(Title: 'Contraseña',),
+
+        SizedBox(height: 25),
+
+      const Text(
+        "O", 
+        style: TextStyle(color: Colors.black, 
+        fontWeight: FontWeight.bold), 
+      ),
+
+      SizedBox(height: 15),
+      Text('Ingresa con:',
+       style: TextStyle(color: Colors.black, 
+        fontSize: 15),
+      ),
+
+      Container(),
+    
+
+          ]
         ),
       )
       ),
