@@ -11,7 +11,8 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar( toolbarHeight: 13,),
+      backgroundColor: Colors.black,
+      appBar: AppBar( toolbarHeight: 13,backgroundColor: Colors.black,),
       body: SafeArea(
         child: Padding(
         padding: EdgeInsets.all(15.0),
@@ -30,7 +31,7 @@ class LoginPage extends StatelessWidget {
             children: [
               Text('Bienvenidos a LoginPage',
          style: TextStyle(
-          color: Colors.black,
+          color: Colors.white,
           fontSize: 23.0,
           
          ),
@@ -47,12 +48,16 @@ class LoginPage extends StatelessWidget {
          CustomTextBox(Title: 'Usuario',UserController: userController,),
           SizedBox(height: 17),
 
-        CustomTextBox(Title: 'Contraseña',UserController: passwordController,),
+        CustomTextBox(Title: 'Contraseña',UserController: passwordController,keyboardType: TextInputType.visiblePassword,),
 
         SizedBox(height: 21),
 
         FloatingActionButton.extended(
-          onPressed: (){},
+          onPressed: (){
+
+
+
+          },
          label: const Text(
           'Login',
           style: TextStyle(
@@ -85,7 +90,7 @@ class LoginPage extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
            children: [
-            Icon(Icons.apple,color: Colors.black,size: 30,),
+            Icon(Icons.apple,color: Colors.white,size: 30,),
             SizedBox(width: 10,),
             Icon(Icons.facebook_rounded, size:30, color: Colors.blue[900],),
             SizedBox(width: 10,),
@@ -98,10 +103,13 @@ class LoginPage extends StatelessWidget {
              Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-              Text('No tienes una cuenta con nosotros?',
-              style: TextStyle(fontSize: 14),),
+              const Text('No tienes una cuenta con nosotros?',
+              style: TextStyle(fontSize: 14,color: Colors.white),),
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                       Navigator.pushNamed(context, '/singup');
+
+                    },
                     child: const Text(
                       "Sign Up now",
                       style: TextStyle(color: Colors.cyan,fontWeight: FontWeight.bold),

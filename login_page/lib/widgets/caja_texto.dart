@@ -12,7 +12,7 @@ class CustomTextBox extends StatelessWidget {
 
    return TextField(
 
-
+      style: TextStyle(color: Colors.white),
     controller: UserController,
       keyboardType: keyboardType,
       //ocultar el texto para la contraseña
@@ -22,7 +22,7 @@ class CustomTextBox extends StatelessWidget {
       label: Text(Title,
       style: const TextStyle(
 
-        color: Colors.black,
+        color: Colors.white,
         fontWeight: FontWeight.bold,
         fontSize: 15
       ),
