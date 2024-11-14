@@ -51,9 +51,9 @@ class SingUpPage extends StatelessWidget {
                   SizedBox(height: 15),
                   CustomTextBox(Title: "Email", UserController: TextEditingController()),
                   SizedBox(height: 15),
-                  CustomTextBox(Title: "Contraseña", UserController: TextEditingController()),
+                  CustomTextBox(Title: "Contraseña", UserController: TextEditingController(), keyboardType: TextInputType.visiblePassword,),
                   SizedBox(height: 15),
-                  CustomTextBox(Title: "Confirma tu contraseña", UserController: TextEditingController())
+                  CustomTextBox(Title: "Confirma tu contraseña", UserController: TextEditingController(), keyboardType: TextInputType.visiblePassword,)
                 ],
               ),
               Container(

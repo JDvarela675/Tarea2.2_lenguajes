@@ -30,27 +30,26 @@ class LoginPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('Bienvenidos a LoginPage',
-         style: TextStyle(
+          style: TextStyle(
           color: Colors.white,
-          fontSize: 23.0,
-          
+          fontSize: 23.0, 
          ),
          ),
          Icon(Icons.group_sharp,
          size: 15,
-         )
+         ),
             ],
           ),
          ),
          
          SizedBox(height: 20),
 
-         CustomTextBox(Title: 'Usuario',UserController: userController,),
+        CustomTextBox(Title: 'Usuario',UserController: userController,),
           SizedBox(height: 17),
 
         CustomTextBox(Title: 'Contraseña',UserController: passwordController,keyboardType: TextInputType.visiblePassword,),
 
-        SizedBox(height: 21),
+        SizedBox(height: 21), 
 
         FloatingActionButton.extended(
           onPressed: (){

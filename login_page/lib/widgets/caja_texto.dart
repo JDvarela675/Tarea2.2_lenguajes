@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CustomTextBox extends StatelessWidget {
   const CustomTextBox({super.key,required this.Title,required this.UserController,this.keyboardType=TextInputType.text});
 
-   final TextEditingController UserController;
+  final TextEditingController UserController;
   final String Title;
   final TextInputType keyboardType;
   
