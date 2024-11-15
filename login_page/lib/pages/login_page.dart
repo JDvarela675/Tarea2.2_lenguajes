@@ -53,9 +53,36 @@ class LoginPage extends StatelessWidget {
 
         FloatingActionButton.extended(
           onPressed: (){
+           if(userController.text.isEmpty || passwordController.text.isEmpty){
 
+             ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: const Text('Revisar si se an ingresado todos los datos'),
+                  action: SnackBarAction(
+                      label: 'ok',
+                      onPressed: () => ScaffoldMessenger.of(context).hideCurrentSnackBar()),
+                ),
+              );
 
+            return;
 
+           }
+
+          else if(userController.text!='jdvarelas@unah.hn' || passwordController.text!='Cordyceps'){
+            
+               ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: const Text('Su usuario o contaseña son incorrectos'),
+                  action: SnackBarAction(
+                      label: 'Volver',
+                      onPressed: () => ScaffoldMessenger.of(context).hideCurrentSnackBar()),
+                ),
+              );
+
+            return;
+          }
+
+          Navigator.pushNamed(context, '/homepage');
           },
          label: const Text(
           'Login',
@@ -73,13 +100,13 @@ class LoginPage extends StatelessWidget {
 
       const Text(
         "O", 
-        style: TextStyle(color: Colors.black, 
+        style: TextStyle(color: Colors.white, 
         fontWeight: FontWeight.bold), 
       ),
 
       SizedBox(height: 20),
       Text('Ingresa con:',
-       style: TextStyle(color: Colors.black, 
+       style: TextStyle(color: Colors.white, 
         fontSize: 15),
       ),
 
