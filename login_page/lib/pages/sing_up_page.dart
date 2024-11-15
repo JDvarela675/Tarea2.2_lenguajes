@@ -55,7 +55,23 @@ class SingUpPage extends StatelessWidget {
                   SizedBox(height: 15),
                   CustomTextBox(Title: "Confirma tu contraseña", UserController: TextEditingController(), keyboardType: TextInputType.visiblePassword,)
                 ],
+
               ),
+
+
+             FloatingActionButton.extended(onPressed: (){},
+             label: const Text('Sig in',
+             style: TextStyle(color: Colors.white),
+             ),
+             backgroundColor: Colors.cyan,
+             
+            shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(80),
+            ),
+
+             extendedPadding: EdgeInsets.all(55), 
+             ),
+
               Container(
                 padding: EdgeInsets.only(top: 4, left: 4),
                 decoration: 

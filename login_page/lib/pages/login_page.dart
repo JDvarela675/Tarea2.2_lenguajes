@@ -6,7 +6,7 @@ class LoginPage extends StatelessWidget {
 
 
     final userController = TextEditingController(text: 'jdvarelas@unah.hn');
-  final passwordController = TextEditingController(text: 'Cordyceps');
+  final passwordController = TextEditingController(text: '20222000646');
 
   @override
   Widget build(BuildContext context) {
@@ -68,19 +68,28 @@ class LoginPage extends StatelessWidget {
 
            }
 
-          else if(userController.text!='jdvarelas@unah.hn' || passwordController.text!='Cordyceps'){
-            
+          if(userController.text!='jdvarelas@unah.hn' || passwordController.text!='20222000646'){
+
+
+            if((userController.text!='kisha.mejia@unah.hn' || passwordController.text!='20232000836')){
+              
                ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: const Text('Su usuario o contaseña son incorrectos'),
                   action: SnackBarAction(
+                    textColor: Colors.black,
                       label: 'Volver',
                       onPressed: () => ScaffoldMessenger.of(context).hideCurrentSnackBar()),
+                       backgroundColor: Colors.red,
                 ),
-              );
+              );    
+              return;
 
-            return;
+            }
+            
+             
           }
+
 
           Navigator.pushNamed(context, '/homepage');
           },
