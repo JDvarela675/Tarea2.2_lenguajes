@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_page/pages/Usuario.dart';
 import 'package:login_page/widgets/caja_texto.dart';
 
 class LoginPage extends StatefulWidget {
@@ -134,7 +135,7 @@ class _LoginPageState extends State<LoginPage> {
           }
 
 
-          Navigator.pushNamed(context, '/homepage',arguments: userController);
+          Navigator.pushNamed(context, '/homepage',arguments: Usuario(userController.text));
           },
          label: const Text(
           'Login',
