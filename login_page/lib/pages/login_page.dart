@@ -20,6 +20,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar( toolbarHeight: 13,backgroundColor: Colors.black,),
       body: SafeArea(
         child: Padding(
@@ -52,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
 
          SizedBox(height: 35),
 
-        CustomTextBox(Title: 'Usuario',UserController: userController,),
+        CustomTextBox(Title: 'Usuario',UserController: userController,hintText: 'Ingresa tu usuario',),
           SizedBox(height: 20),
 
          TextField(
@@ -70,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
         fontSize: 15
       ),
       ),
-       hintText: 'Ingresar su Contraseña',
+       hintText: 'Ingresa tu contraseña',
 
            border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(

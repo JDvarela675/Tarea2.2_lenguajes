@@ -51,13 +51,13 @@ class SingUpPage extends StatelessWidget {
               ),
               Column(
                 children: [
-                  CustomTextBox(Title: "Nombre", UserController: nombreController),
+                  CustomTextBox(Title: "Nombre", hintText: "Ingresa tu nombre", UserController: nombreController, ),
                   SizedBox(height: 15),
-                  CustomTextBox(Title: "Email", UserController: emailController),
+                  CustomTextBox(Title: "Email", hintText: "Ingresa tu email", UserController: emailController, ),
                   SizedBox(height: 15),
-                  CustomTextBox(Title: "Contraseña", UserController: contraseniaController, keyboardType: TextInputType.visiblePassword,),
+                  CustomTextBox(Title: "Contraseña", hintText: "Ingresa tu contraseña", UserController: contraseniaController, keyboardType: TextInputType.visiblePassword, ),
                   SizedBox(height: 15),
-                  CustomTextBox(Title: "Confirma tu contraseña", UserController: verificacionController, keyboardType: TextInputType.visiblePassword,)
+                  CustomTextBox(Title: "Confirma tu contraseña",hintText: "Confirma tu contraseña", UserController: verificacionController, keyboardType: TextInputType.visiblePassword,)
                 ],
               ),
               

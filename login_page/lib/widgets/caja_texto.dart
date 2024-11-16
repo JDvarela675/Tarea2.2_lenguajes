@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CustomTextBox extends StatelessWidget {
-  const CustomTextBox({super.key,required this.Title,required this.UserController,this.keyboardType=TextInputType.text});
+  const CustomTextBox({super.key,required this.Title,required this.UserController,this.keyboardType=TextInputType.text, required this.hintText});
 
   final TextEditingController UserController;
   final String Title;
   final TextInputType keyboardType;
+  final String hintText;
   
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,8 @@ class CustomTextBox extends StatelessWidget {
         fontSize: 15
       ),
       ),
-       hintText: 'Ingresar  $Title',
+      
+        hintText: hintText,
 
            border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(
@@ -37,7 +39,7 @@ class CustomTextBox extends StatelessWidget {
             ),
           ),
 
-     
+
       
     ),
      
