@@ -9,7 +9,7 @@ class CustomTextBox extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-
+  
    return TextField(
 
       style: TextStyle(color: Colors.white),
@@ -17,6 +17,8 @@ class CustomTextBox extends StatelessWidget {
       keyboardType: keyboardType,
       //ocultar el texto para la contraseña
       obscureText: keyboardType == TextInputType.visiblePassword,
+
+      
 
     decoration: InputDecoration(
       label: Text(Title,
@@ -34,6 +36,8 @@ class CustomTextBox extends StatelessWidget {
               Radius.circular(200),
             ),
           ),
+
+     
       
     ),
      

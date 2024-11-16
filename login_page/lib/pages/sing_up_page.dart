@@ -69,7 +69,7 @@ class SingUpPage extends StatelessWidget {
             borderRadius: BorderRadius.circular(80),
             ),
 
-             extendedPadding: EdgeInsets.all(55), 
+             extendedPadding: EdgeInsets.all(55), //hace mas grande el boton
              ),
 
               Container(

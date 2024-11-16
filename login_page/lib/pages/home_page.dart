@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
     backgroundColor: Colors.black,
 
     body: Center(
-      child: Text('Bienvenido a login page :)',
+      child: Text('Bienvenido a login page :) ',
       style: TextStyle(
         color: Colors.white,
         fontSize: 28,

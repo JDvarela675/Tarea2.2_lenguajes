@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:login_page/widgets/caja_texto.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
    LoginPage({super.key});
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
 
+class _LoginPageState extends State<LoginPage> {
     final userController = TextEditingController(text: 'jdvarelas@unah.hn');
+
   final passwordController = TextEditingController(text: '20222000646');
+
+   bool mostrar =true;
 
   @override
   Widget build(BuildContext context) {
@@ -41,13 +48,49 @@ class LoginPage extends StatelessWidget {
             ],
           ),
          ),
-         
+
          SizedBox(height: 20),
 
         CustomTextBox(Title: 'Usuario',UserController: userController,),
-          SizedBox(height: 17),
+          SizedBox(height: 10),
 
-        CustomTextBox(Title: 'Contraseña',UserController: passwordController,keyboardType: TextInputType.visiblePassword,),
+         TextField(
+      style: TextStyle(color: Colors.white),
+    controller: passwordController,
+      keyboardType: TextInputType.visiblePassword,
+      //ocultar el texto para la contraseña
+      obscureText:mostrar,
+    decoration: InputDecoration(
+      label: Text('Contraeña',
+      style: const TextStyle(
+
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+        fontSize: 15
+      ),
+      ),
+       hintText: 'Ingresar su Contraseña',
+
+           border: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(100),
+            ),
+          ),
+
+     suffix: IconButton(onPressed: (){
+      if(mostrar== true)
+      mostrar=false;
+      else
+      mostrar=true;
+
+      setState(() {});
+     }, icon: Icon(Icons.remove_red_eye),iconSize: 20,color: Colors.cyan,)
+     ),
+    ),
+   
+
+
+
 
         SizedBox(height: 21), 
 
@@ -91,7 +134,7 @@ class LoginPage extends StatelessWidget {
           }
 
 
-          Navigator.pushNamed(context, '/homepage');
+          Navigator.pushNamed(context, '/homepage',arguments: userController);
           },
          label: const Text(
           'Login',
