@@ -16,6 +16,7 @@ class SingUpPage extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.black,
+        
         leading: IconButton(
           onPressed: (){
             Navigator.pop(context);
@@ -28,7 +29,7 @@ class SingUpPage extends StatelessWidget {
       body: SingleChildScrollView(
          
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 30),
+          padding: const EdgeInsets.symmetric(horizontal: 25),
           
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

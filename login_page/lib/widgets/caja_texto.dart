@@ -12,7 +12,7 @@ class CustomTextBox extends StatelessWidget {
   Widget build(BuildContext context) {
   
    return TextField(
-
+      cursorColor: Colors.white,
       style: TextStyle(color: Colors.white),
     controller: UserController,
       keyboardType: keyboardType,
@@ -24,7 +24,7 @@ class CustomTextBox extends StatelessWidget {
     decoration: InputDecoration(
       label: Text(Title,
       style: const TextStyle(
-
+        
         color: Colors.white,
         fontWeight: FontWeight.bold,
         fontSize: 15
@@ -33,12 +33,21 @@ class CustomTextBox extends StatelessWidget {
       
         hintText: hintText,
 
-           border: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(200),
-            ),
-          ),
+      //bordes cuando esta des-eleccionado
+      border: const OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.white, width: 1.5),
+              borderRadius: BorderRadius.all(
+                Radius.circular(200),
+              )
+      ), 
 
+      //bordes cuando esta seleccionado
+      focusedBorder: const OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.cyan, width: 2.5),
+              borderRadius: BorderRadius.all(
+                Radius.circular(200),
+              )
+      ),
 
       
     ),

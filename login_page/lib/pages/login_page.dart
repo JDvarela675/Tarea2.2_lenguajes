@@ -21,27 +21,29 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       backgroundColor: Colors.black,
       resizeToAvoidBottomInset: false,
-      appBar: AppBar( toolbarHeight: 13,backgroundColor: Colors.black,),
-      body: SafeArea(
+      appBar: AppBar( toolbarHeight: 50 ,backgroundColor: Colors.black,),
+      body: SingleChildScrollView(
         child: Padding(
-        padding: EdgeInsets.all(15.0),
+        padding: const EdgeInsets.symmetric(horizontal: 25),
         child: Column(
+          
           children: [
             Icon( Icons.group,
                 size: 70,
                 color: Colors.cyan,
                 ),
 
-           SizedBox(height: 20),
+        const SizedBox(height: 20),
 
          Container(
           child: const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Bienvenidos a LoginPage',
+              Text(' ¡Bienvenidos!',
           style: TextStyle(
           color: Colors.white,
           fontSize: 30, 
+          fontWeight: FontWeight.bold,
          ),
          ),
          Icon(Icons.group_sharp,
@@ -51,50 +53,59 @@ class _LoginPageState extends State<LoginPage> {
           ),
          ),
 
-         SizedBox(height: 35),
+        const SizedBox(height: 35),
 
         CustomTextBox(Title: 'Usuario',UserController: userController,hintText: 'Ingresa tu usuario',),
-          SizedBox(height: 20),
+          
+        const SizedBox(height: 20),
 
          TextField(
-      style: TextStyle(color: Colors.white),
-    controller: passwordController,
-      keyboardType: TextInputType.visiblePassword,
-      //ocultar el texto para la contraseña
-      obscureText:mostrar,
-    decoration: InputDecoration(
-      label: Text('Contraeña',
-      style: const TextStyle(
+          cursorColor: Colors.white,
+          style: TextStyle(color: Colors.white),
+          controller: passwordController,
+          keyboardType: TextInputType.visiblePassword,
+          //ocultar el texto para la contraseña
+          obscureText:mostrar,
+          decoration: InputDecoration(
+            label: const Text('Contraeña',
+            style: TextStyle(
 
-        color: Colors.white,
-        fontWeight: FontWeight.bold,
-        fontSize: 15
-      ),
-      ),
-       hintText: 'Ingresa tu contraseña',
-
-           border: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(100),
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 15
             ),
           ),
+          
+          hintText: 'Ingresa tu contraseña',
 
-     suffix: IconButton(onPressed: (){
-      if(mostrar== true)
-      mostrar=false;
-      else
-      mostrar=true;
+          //bordes cuando esta des-eleccionado
+          border: const OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white, width: 1.5),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(200),
+                  )
+          ), 
 
-      setState(() {});
-     }, icon: Icon(Icons.remove_red_eye),iconSize: 20,color: Colors.cyan,)
-     ),
-    ),
+          //bordes cuando esta seleccionado
+          focusedBorder: const OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.cyan, width: 2.5),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(200),
+                  )
+          ),
+
+          suffix: IconButton(onPressed: (){
+            if(mostrar== true)
+            mostrar=false;
+            else
+            mostrar=true;
+
+          setState(() {});
+        }, icon: Icon(Icons.remove_red_eye),iconSize: 20,color: Colors.cyan,)
+        ),
+        ),
    
-
-
-
-
-        SizedBox(height: 21), 
+        SizedBox(height: 20), 
 
         FloatingActionButton.extended(
           onPressed: (){
@@ -139,21 +150,29 @@ class _LoginPageState extends State<LoginPage> {
           Navigator.pushNamed(context, '/homepage',arguments: Usuario(userController.text));
           },
          label: const Text(
-          'Login',
+          'Iniciar Sesión',
           style: TextStyle(
             fontSize: 18,
              fontWeight: FontWeight.bold,
              color: Colors.white
              ), 
-  ),
-       backgroundColor: Colors.cyan,
+          ),
+       backgroundColor: Colors.black,
+       elevation: 0,
+       shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+        side: BorderSide(
+          color: Colors.cyan,
+          width: 2,
+        )
+       ),
 
 
         ),
-        SizedBox(height: 15),
+        SizedBox(height: 20),
 
       const Text(
-        "O", 
+        "ó", 
         style: TextStyle(color: Colors.white, 
         fontWeight: FontWeight.bold), 
       ),
@@ -178,20 +197,23 @@ class _LoginPageState extends State<LoginPage> {
                       ],
                   ),
               ),
-              SizedBox(height: 23,),
+              SizedBox(height: 30,),
 
-             Row(
+             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-              const Text('No tienes una cuenta con nosotros?',
-              style: TextStyle(fontSize: 14,color: Colors.white),),
+              const Text('¿No tienes una cuenta con nosotros?',
+              style: TextStyle(fontSize: 15,color: Colors.white),),
+
+                //SizedBox(height: 5),
+      
                 TextButton(
                     onPressed: () {
                        Navigator.pushNamed(context, '/singup');
 
                     },
                     child: const Text(
-                      " ¡Registrate aquí!",
+                      "¡Registrate aquí!",
                       style: TextStyle(color: Colors.cyan,fontWeight: FontWeight.bold),
                     ),
                   ),
