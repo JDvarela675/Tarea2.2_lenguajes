@@ -143,11 +143,9 @@ class _LoginPageState extends State<LoginPage> {
 
             }
             
-             
           }
 
-
-          Navigator.pushNamed(context, '/homepage',arguments: Usuario(userController.text));
+           Navigator.pushNamed(context, '/homepage',arguments: Usuario(userController.text));
           },
          label: const Text(
           'Iniciar Sesión',
