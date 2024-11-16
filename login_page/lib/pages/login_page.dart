@@ -40,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
               Text('Bienvenidos a LoginPage',
           style: TextStyle(
           color: Colors.white,
-          fontSize: 23.0, 
+          fontSize: 30, 
          ),
          ),
          Icon(Icons.group_sharp,
@@ -50,10 +50,10 @@ class _LoginPageState extends State<LoginPage> {
           ),
          ),
 
-         SizedBox(height: 20),
+         SizedBox(height: 35),
 
         CustomTextBox(Title: 'Usuario',UserController: userController,),
-          SizedBox(height: 10),
+          SizedBox(height: 20),
 
          TextField(
       style: TextStyle(color: Colors.white),
@@ -101,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
 
              ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
-                  content: const Text('Revisar si se an ingresado todos los datos'),
+                  content: const Text('Revisar si se han ingresado todos los datos'),
                   action: SnackBarAction(
                       label: 'ok',
                       onPressed: () => ScaffoldMessenger.of(context).hideCurrentSnackBar()),
@@ -190,7 +190,7 @@ class _LoginPageState extends State<LoginPage> {
 
                     },
                     child: const Text(
-                      "Sign Up now",
+                      " ¡Registrate aquí!",
                       style: TextStyle(color: Colors.cyan,fontWeight: FontWeight.bold),
                     ),
                   ),

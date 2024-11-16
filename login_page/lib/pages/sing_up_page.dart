@@ -37,10 +37,10 @@ class SingUpPage extends StatelessWidget {
                 children: [
                   const Text("Registrate", style: TextStyle(
                     color: Colors.cyan,
-                    fontSize: 40,
+                    fontSize: 30,
                     fontWeight: FontWeight.bold,
                   ),),
-                  const SizedBox(height: 30,),
+                  const SizedBox(height: 35,),
                   Text("¡Crea tu cuenta con nosotros!",
                     style: TextStyle(
                       fontSize: 20,
