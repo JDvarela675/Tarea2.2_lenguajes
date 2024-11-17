@@ -113,9 +113,10 @@ class _LoginPageState extends State<LoginPage> {
 
              ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
-                  content: const Text('Revisar si se han ingresado todos los datos'),
+                  content: const Text('Revisa si se han ingresado todos los datos'),
                   action: SnackBarAction(
                       label: 'ok',
+                      textColor: Colors.cyan,
                       onPressed: () => ScaffoldMessenger.of(context).hideCurrentSnackBar()),
                 ),
               );

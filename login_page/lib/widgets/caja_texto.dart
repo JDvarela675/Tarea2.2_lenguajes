@@ -11,10 +11,10 @@ class CustomTextBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
   
-   return TextField(
+   return TextFormField(
       cursorColor: Colors.white,
       style: TextStyle(color: Colors.white),
-    controller: UserController,
+      controller: UserController,
       keyboardType: keyboardType,
       //ocultar el texto para la contraseña
       obscureText: keyboardType == TextInputType.visiblePassword,
@@ -47,11 +47,9 @@ class CustomTextBox extends StatelessWidget {
               borderRadius: BorderRadius.all(
                 Radius.circular(200),
               )
-      ),
-
-      
+      ),  
     ),
-     
+
    );
   }
 }
