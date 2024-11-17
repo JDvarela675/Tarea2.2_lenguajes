@@ -9,21 +9,42 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final argumentos =
-        ModalRoute.of(context)!.settings.arguments as Usuario;
+    final argumentos = ModalRoute.of(context)!.settings.arguments as Usuario;
+
   return Scaffold(
     backgroundColor: Colors.black,
-
-    body: Center(
-      child: Text('Bienvenido a login page :) ${argumentos.username}',
+      appBar: AppBar(title: Text(argumentos.username,
       style: TextStyle(
-        color: Colors.white,
-        fontSize: 28,
-        fontWeight: FontWeight.bold
+        color: Colors.cyan,
+        fontWeight: FontWeight.bold,
+        fontSize: 18
       ),
-      ),// mientras pasamos el nombre del usuario
-    ),
+      ),
+        backgroundColor: Colors.black,
+        actions: [
+          CircleAvatar(backgroundColor: Colors.teal,),
+          SizedBox(width: 30),
+        ],
+        ),
 
+        body: Column(
+          children: [
+            SizedBox(height: 60,),
+          Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+               Text('My page',
+               style: TextStyle(
+                color: Colors.white,
+                fontSize: 25
+               ),)
+              ],
+            ),
+          ),
+           
+          ]
+        ),
   );
   }
 }
