@@ -133,7 +133,20 @@ class SingUpPage extends StatelessWidget {
                     return;
                   }
 
-                  //todo bieeeeen >:D asi que imprimirmos los datos en consola
+                  // aviso de que todo salio bien al usuario
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: const Text("¡Registro exitoso! Bienvenido a la familia"),
+                      action: SnackBarAction(
+                          label: "Listo",
+                          textColor: Colors.white,
+                          onPressed: () => ScaffoldMessenger.of(context).hideCurrentSnackBar(),
+                          backgroundColor: Colors.green,
+                      ),
+                    )
+                  );
+
+                  // todo bieeeeen >:D asi que imprimirmos los datos en consola
                   print("DATOS");
                   print("nombre:                ${nombreController.text}");
                   print("email:                 ${emailController.text}");
