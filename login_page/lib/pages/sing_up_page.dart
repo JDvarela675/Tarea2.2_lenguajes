@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:login_page/pages/Usuario.dart';
 import 'package:login_page/widgets/caja_texto.dart';
@@ -131,12 +133,16 @@ class SingUpPage extends StatelessWidget {
                     return;
                   }
 
-                  //todo bieeeeen >:D
-                  Navigator.pushNamed(context, '/homepage', arguments: Usuario(nombreController.text));
-                },
-                
-                
+                  //todo bieeeeen >:D asi que imprimirmos los datos en consola
+                  print("DATOS");
+                  print("nombre:                ${nombreController.text}");
+                  print("email:                 ${emailController.text}");
+                  print("teléfono:              ${telefonoController.text}");
+                  print("contraseña:            ${contraseniaController.text}");
+                  print("contraseña confirmada: ${verificacionController.text}");
 
+                },
+          
                 label: const Text(
                   'Registrate',
                   style: TextStyle(
